@@ -60,7 +60,7 @@ wget -O chngedomain "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/
 wget -O certxray "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/certxray.sh"
 wget -O xp "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/xp.sh"
 wget -O speedtest "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/speedtes_cli.py"
-wget -O autoreboot "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/autoreboot.sh"
+wget -O autoreboot "https://raw.githubusercontent.com/Amoebacoy/newpro/main/autoreboot.sh"
 wget -O running "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/running.sh"
 
 
