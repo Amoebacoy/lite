@@ -83,6 +83,7 @@ chmod +x chngedomain
 chmod +x xp
 chmod +x speedtest
 chmod +x running
+chmod +x autoreboot
 
 clear
 echo -e "Update Selesai..."
