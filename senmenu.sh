@@ -47,7 +47,7 @@ wget -O menu "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/menu.sh
 wget -O add-akun "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/add-akun.sh"
 wget -O senmenu "https://raw.githubusercontent.com/Amoebacoy/lite/main/senmenu.sh"
 wget -O add-akun "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/add-akun.sh"
-wget -O delete-akun "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/delete-akun.sh"
+wget -O delete-akun "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/delv2ray.sh"
 wget -O certv2ray "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/certv2ray.sh"
 wget -O restart-xray "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/restart-xray.sh"
 wget -O menu "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/menu.sh"
