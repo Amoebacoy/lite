@@ -42,6 +42,53 @@ wget https://raw.githubusercontent.com/Amoebacoy/lite/main/install-xray.sh && ch
 wget https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/senmenu.sh && chmod +x senmenu.sh && ./senmenu.sh
 #
 #SELESAI
+cat > /etc/cron.d/xp_otm <<-END
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+2 0 * * * root /usr/bin/xp
+END
+cat > /etc/cron.d/cl_otm <<-END
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+2 1 * * * root /usr/bin/clearlog
+END
+echo "59 * * * * root killall /bin/bash /usr/bin/menu" >> /etc/crontab
+cat > /home/re_otm <<-END
+7
+END
+service cron restart >/dev/null 2>&1
+service cron reload >/dev/null 2>&1
+clear
+cat> /root/.profile << END
+if [ "$BASH" ]; then
+if [ -f ~/.bashrc ]; then
+. ~/.bashrc
+fi
+fi
+mesg n || true
+clear
+menu
+END
+chmod 644 /root/.profile
+if [ -f "/root/log-install.txt" ]; then
+rm -fr /root/log-install.txt
+fi
+if [ -f "/etc/afak.conf" ]; then
+rm -fr /etc/afak.conf
+fi
+if [ ! -f "/etc/log-create-user.log" ]; then
+echo "Log All Account " > /etc/log-create-user.log
+fi
+history -c
+aureb=$(cat /home/re_otm)
+b=11
+if [ $aureb -gt $b ]
+then
+gg="PM"
+else
+gg="AM"
+fi
+cd
 # collor status
 error1="${RED} [ERROR] ${NC}"
 success="${GREEN} [OK] ${NC}"
