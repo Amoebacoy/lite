@@ -87,4 +87,4 @@ chmod +x autoreboot
 
 clear
 echo -e "Update Selesai..."
-cd
+
