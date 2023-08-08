@@ -136,4 +136,6 @@ yellow "Domain added.."
 sleep 3
 clear
 rm -fr /root/auto.sh
-cd
+read -n 1 -s -r -p "Press any key to back on menu"
+
+menu
