@@ -339,4 +339,5 @@ echo -e "=> TROJAN OPOK   : ws://bugcom/trojan" | tee -a /etc/log-create-user.lo
 echo -e "=> VMESS  OPOK   : ws://bugcom/vmess" | tee -a /etc/log-create-user.log
 echo -e "=> VLESS  OPOK   : ws://bugcom/vless" | tee -a /etc/log-create-user.log
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a /etc/log-create-user.log
-cd
+read -n 1 -s -r -p "   Press any key to back on menu"
+menu
