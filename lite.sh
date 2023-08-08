@@ -3,10 +3,6 @@ if [ "${EUID}" -ne 0 ]; then
 		echo "You need to run this script as root"
 		exit 1
 fi
-if [ "$(systemd-detect-virt)" == "openvz" ]; then
-		echo "OpenVZ is not supported"
-		exit 1
-fi
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -18,6 +14,41 @@ PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # =========================================
+export IP=$( curl -s https://ipinfo.io/ip/ )
+export NETWORK_IFACE="$(ip route show to default | awk '{print $5}')"
+if [[ -r /etc/xray/domain ]]; then
+clear
+echo -e "${INFO} Having Script Detected !"
+echo -e "${INFO} If You Replacing Script, All Client Data On This VPS Will Be Cleanup !"
+read -p "Are You Sure Wanna Replace Script ? (Y/N) " lanjutkan
+if [[ $lanjutkan == "Y" ]]; then
+clear
+echo -e "${INFO} Starting Replacing Script !"
+elif [[ $lanjutkan == "y" ]]; then
+clear
+echo -e "${INFO} Starting Replacing Script !"
+rm -rf /var/lib/ipvps.conf
+rm -rf /var/lib/akbarstorevpn/ipvps.conf
+rm -rf senmenu
+rm -rf senmenu.sh
+rm -rf lite.sh
+rm -rf install-xray.sh
+rm -rf install-tools.sh
+rm -rf adddomain.sh
+elif [[ $lanjutkan == "N" ]]; then
+echo -e "${INFO} Action Canceled !"
+exit 1
+elif [[ $lanjutkan == "n" ]]; then
+echo -e "${INFO} Action Canceled !"
+exit 1
+else
+echo -e "${EROR} Your Input Is Wrong !"
+exit 1
+fi
+clear
+fi
+echo -e "${GREEN}Starting Installation............${NC}"
+cd /root/
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
