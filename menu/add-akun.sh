@@ -318,7 +318,7 @@ clear
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a /etc/log-create-user.log
 echo -e "====== XRAY MANTAP Multi Port=======" | tee -a /etc/log-create-user.log
 echo -e "INFORMASI AKUN VPN XRAY" | tee -a /etc/log-create-user.log
-echo -e "Remarks	: $user" | tee -a /etc/log-create-user.log
+echo -e "Remarks       	: $user" | tee -a /etc/log-create-user.log
 echo -e "Expired On	: $exp" | tee -a /etc/log-create-user.log
 echo -e "IP		: $MYIP" | tee -a /etc/log-create-user.log
 echo -e "Host/Domain	: $domain" | tee -a /etc/log-create-user.log
@@ -330,13 +330,13 @@ echo -e "GRPC TLS       : 443" | tee -a /etc/log-create-user.log
 echo -e "*Note OPOK: opok only supports coremeta"
 echo -e "====== Path =======" | tee -a /etc/log-create-user.log
 echo -e "=> TROJAN WS TLS : /trojan" | tee -a /etc/log-create-user.log
-echo -e "=> TROJAN GRPC   : trojan-grpc" | tee -a /etc/log-create-user.log
-echo -e "=> TROJAN OPOK   : ws://bugcom/trojan" | tee -a /etc/log-create-user.log
 echo -e "=> VMESS  WS TLS : /vmess" | tee -a /etc/log-create-user.log
-echo -e "=> VMESS  GRPC   : vmess-grpc" | tee -a /etc/log-create-user.log
-echo -e "=> VMESS  OPOK   : ws://bugcom/vmess" | tee -a /etc/log-create-user.log
 echo -e "=> VLESS  WS TLS : /vless" | tee -a /etc/log-create-user.log
+echo -e "=> TROJAN GRPC   : trojan-grpc" | tee -a /etc/log-create-user.log
+echo -e "=> VMESS  GRPC   : vmess-grpc" | tee -a /etc/log-create-user.log
 echo -e "=> VLESS  GRPC   : vless-grpc" | tee -a /etc/log-create-user.log
+echo -e "=> TROJAN OPOK   : ws://bugcom/trojan" | tee -a /etc/log-create-user.log
+echo -e "=> VMESS  OPOK   : ws://bugcom/vmess" | tee -a /etc/log-create-user.log
 echo -e "=> VLESS  OPOK   : ws://bugcom/vless" | tee -a /etc/log-create-user.log
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a /etc/log-create-user.log
 cd
