@@ -75,13 +75,13 @@ sed -i '/#vmessgrpc$/a\#& '"$user $exp"'\
 #
 systemctl restart xray
 #buatvless
-vlesslinkws="vless://${uuid}@${domain}:443?path=/xrayws&security=tls&encryption=none&type=ws#${user}"
-vlesslinknon="vless://${uuid}@${domain}:80?path=/xrayws&encryption=none&type=ws#${user}"
+vlesslinkws="vless://${uuid}@${domain}:443?path=/vless&security=tls&encryption=none&type=ws#${user}"
+vlesslinknon="vless://${uuid}@${domain}:80?path=/vless&encryption=none&type=ws#${user}"
 vlesslinkgrpc="vless://${uuid}@${domain}:443?mode=gun&security=tls&encryption=none&type=grpc&serviceName=vless-grpc&sni=bug.com#${user}"
 
 #buattrojan
 trojanlinkgrpc="trojan://${uuid}@${domain}:443?mode=gun&security=tls&type=grpc&serviceName=trojan-grpc&sni=bug.com#${user}"
-trojanlinkws="trojan://${uuid}@${domain}:443?path=/xraytrojanws&security=tls&host=bug.com&type=ws&sni=bug.com#${user}"
+trojanlinkws="trojan://${uuid}@${domain}:443?path=/trojan&security=tls&host=bug.com&type=ws&sni=bug.com#${user}"
 
 #buatshadowsocks
 #
@@ -332,9 +332,9 @@ echo -e "━━━━━━━━━━━━━━━━━━━━━━━�
 echo -e "Protokol VPN: TROJAN" | tee -a /etc/log-create-user.log
 echo -e "Network: WS/GRPC" | tee -a /etc/log-create-user.log
 echo -e "====== Path =======" | tee -a /etc/log-create-user.log
-echo -e "=> WS TLS : /xraytrojanws" | tee -a /etc/log-create-user.log
+echo -e "=> WS TLS : /trojan" | tee -a /etc/log-create-user.log
 echo -e "=> GRPC   : trojan-grpc" | tee -a /etc/log-create-user.log
-echo -e "=> OPOK   : ws://bugcom/xraytrojanws" | tee -a /etc/log-create-user.log
+echo -e "=> OPOK   : ws://bugcom/trojan" | tee -a /etc/log-create-user.log
 echo -e "====== Import Config From Clipboard =======" | tee -a /etc/log-create-user.log
 echo -e "Link Config WS TLS   : $trojanlinkws" | tee -a /etc/log-create-user.log
 echo -e "Link Config GRPC TLS : $trojanlinkgrpc" | tee -a /etc/log-create-user.log
@@ -355,9 +355,9 @@ echo -e "━━━━━━━━━━━━━━━━━━━━━━━�
 echo -e "Protokol VPN: VLESS" | tee -a /etc/log-create-user.log
 echo -e "Network: WS/GRPC" | tee -a /etc/log-create-user.log
 echo -e "====== Path =======" | tee -a /etc/log-create-user.log
-echo -e "=> WS TLS : /xrayws" | tee -a /etc/log-create-user.log
+echo -e "=> WS TLS : /vless" | tee -a /etc/log-create-user.log
 echo -e "=> GRPC   : vless-grpc" | tee -a /etc/log-create-user.log
-echo -e "=> OPOK   : ws://bugcom/xrayws" | tee -a /etc/log-create-user.log
+echo -e "=> OPOK   : ws://bugcom/vless" | tee -a /etc/log-create-user.log
 echo -e "====== Import Config From Clipboard =======" | tee -a /etc/log-create-user.log
 echo -e "Link Config WS TLS    : $vlesslinkws" | tee -a /etc/log-create-user.log
 echo -e "Link Config GRPC TLS  : $vlesslinkgrpc" | tee -a /etc/log-create-user.log
@@ -366,9 +366,9 @@ echo -e "Protokol VPN: VMESS" | tee -a /etc/log-create-user.log
 echo -e "Alter ID: 0" | tee -a /etc/log-create-user.log
 echo -e "Network: WS/GRPC" | tee -a /etc/log-create-user.log
 echo -e "====== Path =======" | tee -a /etc/log-create-user.log
-echo -e "=> WS TLS : /xrayvws" | tee -a /etc/log-create-user.log
+echo -e "=> WS TLS : /vmess" | tee -a /etc/log-create-user.log
 echo -e "=> GRPC   : vmess-grpc" | tee -a /etc/log-create-user.log
-echo -e "=> OPOK   : ws://bugcom/xrayvws" | tee -a /etc/log-create-user.log
+echo -e "=> OPOK   : ws://bugcom/vmess" | tee -a /etc/log-create-user.log
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a /etc/log-create-user.log
 echo -e "SCRIPT MANTAP XRAY" | tee -a /etc/log-create-user.log
 echo "" | tee -a /etc/log-create-user.log
