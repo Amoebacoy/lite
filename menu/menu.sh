@@ -1,15 +1,103 @@
 #!/bin/bash
+BIBlack='\033[1;90m' 
+Tes sih ini     # Black
+BIRed='\033[1;91m'        # Red
+BIGreen='\033[1;92m'      # Green
+BIYellow='\033[1;93m'     # Yellow
+BIBlue='\033[1;94m'       # Blue
+BIPurple='\033[1;95m'     # Purple
+BICyan='\033[1;96m'       # Cyan
+BIWhite='\033[1;97m'      # White
+UWhite='\033[4;37m'       # White
+On_IPurple='\033[0;105m'  #
+On_IRed='\033[0;101m'
+IBlack='\033[0;90m'       # Black
+IRed='\033[0;91m'         # Red
+IGreen='\033[0;92m'       # Green
+IYellow='\033[0;93m'      # Yellow
+IBlue='\033[0;94m'        # Blue
+IPurple='\033[0;95m'      # Purple
+ICyan='\033[0;96m'        # Cyan
+IWhite='\033[0;97m'       # White
+NC='\e[0m'
+
+# // Export Color & Information
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export LIGHT='\033[0;37m'
+export NC='\033[0m'
+
+# // Export Banner Status Information
+export EROR="[${RED} EROR ${NC}]"
+export INFO="[${YELLOW} INFO ${NC}]"
+export OKEY="[${GREEN} OKEY ${NC}]"
+export PENDING="[${YELLOW} PENDING ${NC}]"
+export SEND="[${YELLOW} SEND ${NC}]"
+export RECEIVE="[${YELLOW} RECEIVE ${NC}]"
+
+# // Export Align
+export BOLD="\e[1m"
+export WARNING="${RED}\e[5m"
+export UNDERLINE="\e[4m"
+
+# // Exporting URL Host
+export Server_URL="raw.githubusercontent.com/Zeastore/test/main"
+export Server1_URL="raw.githubusercontent.com/Zeastore/limit/main"
+export Server_Port="443"
+export Server_IP="underfined"
+export Script_Mode="Stable"
+export Auther=".geovpn"
+
+# // Root Checking
+if [ "${EUID}" -ne 0 ]; then
+		echo -e "${EROR} Please Run This Script As Root User !"
+		exit 1
+fi
+
+# // Exporting IP Address
+export IP=$( curl -s https://ipinfo.io/ip/ )
+
+# // Exporting Network Interface
+export NETWORK_IFACE="$(ip route show to default | awk '{print $5}')"
+
+# // Clear
 clear
-echo -e "\e[36m╒════════════════════════════════════════════╕\033[0m"
-echo -e " \E[0;41;36m                 INFO SERVER                \E[0m"
-echo -e "\e[36m╘════════════════════════════════════════════╛\033[0m"
+clear && clear && clear
+clear;clear;clear
+cek=$(service ssh status | grep active | cut -d ' ' -f5)
+if [ "$cek" = "active" ]; then
+stat=-f5
+else
+stat=-f7
+fi
+ngx=$(service nginx status | grep active | cut -d ' ' $stat)
+if [ "$ngx" = "active" ]; then
+resngx="${green}ON${NC}"
+else
+resngx="${red}OFF${NC}"
+fi
+v2r=$(service xray status | grep active | cut -d ' ' $stat)
+if [ "$v2r" = "active" ]; then
+resv2r="${green}ON${NC}"
+else
+resv2r="${red}OFF${NC}"
+fi
 uphours=`uptime -p | awk '{print $2,$3}' | cut -d , -f1`
 upminutes=`uptime -p | awk '{print $4,$5}' | cut -d , -f1`
 uptimecek=`uptime -p | awk '{print $6,$7}' | cut -d , -f1`
 cekup=`uptime -p | grep -ow "day"`
 IPVPS=$(curl -s ipinfo.io/ip )
 ISPVPS=$( curl -s ipinfo.io/org )
-#clear
+ttoday="$(vnstat | grep today | awk '{print $8" "substr ($9, 1, 3)}' | head -1)"
+tmon="$(vnstat -m | grep `date +%G-%m` | awk '{print $8" "substr ($9, 1 ,3)}' | head -1)"
+clear
+echo -e "\e[36m╒════════════════════════════════════════════════════════╕\033[0m"
+echo -e " \E[0;41;36m                     INFO SERVER                   \E[0m"
+echo -e "\e[36m╘════════════════════════════════════════════════════════╛\033[0m"
 if [ "$cekup" = "day" ]; then
 echo -e "System Uptime   :  $uphours $upminutes $uptimecek"
 else
@@ -17,35 +105,36 @@ echo -e "System Uptime   :  $uphours $upminutes"
 fi
 echo -e "IP-VPS          :  $IPVPS"
 echo -e "ISP-VPS         :  $ISPVPS"
-echo "╔═════════════════════════════════════════════════════════════════╗"
-echo "║                     ┃ Script By SL ┃                            ║" 
-echo "╚═════════════════════════════════════════════════════════════════╝"
-echo "╔═════════════════════════════════════════════════════════════════╗"
-echo "║ ┃ Link Script ┃  ┃ https://github.com/fisabiliyusri/MANTAP-XRAY ║" 
-echo "╚═════════════════════════════════════════════════════════════════╝"
-echo "╔═════════════════════════════════════════════════════════════════╗"
-echo "║                     ┃ XRAY XMENU ┃                              ║" 
-echo "╚═════════════════════════════════════════════════════════════════╝"  
-echo "║ 1. Buat Semua Akun XRAY   ┃ Create Account                      ║"
-echo "║ 2. Hapus Akun XRAY        ┃ Delete Account                      ║"
-echo "║ 3. Cek Nama Domain        ┃ Domain Name Checker                 ║"
-echo "║ 4. Cek IP Publik          ┃ Check Public IP                     ║"
-echo "║ 5. Update DLL             ┃ Update ETC                          ║"
-echo "║ 6. XRAY UPDATE Core       ┃ Update Core                         ║"
-echo "║ 7. Autoreboot             ┃ autoreboot                          ║"
-echo "║ 8. Hidupkan Ulang Xray    ┃ Restart Service XRAY                ║"
-echo "║ 9. Perbarui Sertifikat    ┃ Update Certificate                  ║"
-echo "║ 10.Change Domain          ┃ CNG DOMAIN                          ║"
-echo "║ 11.Running                ┃                                     ║"
-echo "║ 12.Test Kecepatan Server  ┃ Speedtest Server                    ║"
-echo "║ 13.Hidupkan Ulang VPS     ┃ Reboot                              ║"
-echo "║ 14.Keluar Dari Menu       ┃ Exit Menu                           ║"
-echo "║ 15.Info Script            ┃                                     ║"
-echo "║ 16.Auto Pointing Subdomain┃                                     ║"
-echo "║ 17.Cek Semua Layanan Port ┃ Check All Port Service              ║"
-echo "╚═════════════════════════════════════════════════════════════════╝" 
-read -p "     Select From Options [1-69 or x] :  " xmenu
-case $xmenu in 
+echo -e "╔═════════════════════════════════════════════════════════════════╗"
+echo -e "║                        ┃ XRAY Lite ┃                            ║" 
+echo -e "╚═════════════════════════════════════════════════════════════════╝"
+echo -e "╔═════════════════════════════════════════════════════════════════╗"
+echo -e "     ${BICyan} NGINX ${NC}: ${GREEN}$resngx         ${LIGHT} Today  : $ttoday"
+echo -e "     ${BICyan} XRAY  ${NC}: ${GREEN}$resv2r         ${LIGHT} Monthly: $tmon" 
+echo -e "╚═════════════════════════════════════════════════════════════════╝"
+echo -e "╔═════════════════════════════════════════════════════════════════╗"
+echo -e "║                       ┃ XRAY XMENU ┃                            ║" 
+echo -e "╚═════════════════════════════════════════════════════════════════╝"  
+echo -e "║ 1. Buat Semua Akun XRAY   ┃ Create Account                      ║"
+echo -e "║ 2. Hapus Akun XRAY        ┃ Delete Account                      ║"
+echo -e "║ 3. Cek Nama Domain        ┃ Domain Name Checker                 ║"
+echo -e "║ 4. Cek IP Publik          ┃ Check Public IP                     ║"
+echo -e "║ 5. Update DLL             ┃ Update ETC                          ║"
+echo -e "║ 6. XRAY UPDATE Core       ┃ Update Core                         ║"
+echo -e "║ 7. Autoreboot             ┃ autoreboot                          ║"
+echo -e "║ 8. Hidupkan Ulang Xray    ┃ Restart Service XRAY                ║"
+echo -e "║ 9. Perbarui Sertifikat    ┃ Update Certificate                  ║"
+echo -e "║ 10.Change Domain          ┃ CNG DOMAIN                          ║"
+echo -e "║ 11.Running                ┃                                     ║"
+echo -e "║ 12.Test Kecepatan Server  ┃ Speedtest Server                    ║"
+echo -e "║ 13.Hidupkan Ulang VPS     ┃ Reboot                              ║"
+echo -e "║ 14.Keluar Dari Menu       ┃ Exit Menu                           ║"
+echo -e "║ 15.Info Script            ┃                                     ║"
+echo -e "║ 16.Auto Pointing Subdomain┃                                     ║"
+echo -e "║ 17.Cek Semua Layanan Port ┃ Check All Port Service              ║"
+echo -e "╚═════════════════════════════════════════════════════════════════╝" 
+read -p "     Select From Options [1-69 or x] :  " menu
+case $menu in 
 1)
 add-akun
 ;;
@@ -98,6 +187,6 @@ auto-pointing
 cek-port
 ;;
 *)
-echo "Input The Correct Number !"
+echo -e "Input The Correct Number !"
 ;;
 esac
