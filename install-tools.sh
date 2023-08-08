@@ -155,3 +155,16 @@ cd
 chown -R www-data:www-data /home/vps/public_html
 /etc/init.d/nginx restart
 cd
+# install fail2ban
+apt -y install fail2ban
+
+# Instal DDOS Flate
+if [ -d '/usr/local/ddos' ]; then
+	echo; echo; echo "Please un-install the previous version first"
+	exit 0
+else
+	mkdir /usr/local/ddos
+fi
+clear
+echo; echo 'Installing DOS-Deflate 0.6'; echo
+cd
