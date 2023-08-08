@@ -87,4 +87,5 @@ chmod +x autoreboot
 
 clear
 echo -e "Update Selesai..."
+rm -fr /root/senmenu.sh
 
