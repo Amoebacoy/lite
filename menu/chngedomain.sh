@@ -88,3 +88,6 @@ bash acme.sh --installcert -d $domain1 --fullchainpath /etc/xray/xray.crt --keyp
 sleep 3
 clear
 restart-xray
+clear
+read -n 1 -s -r -p "   Press any key to back on menu"
+menu
