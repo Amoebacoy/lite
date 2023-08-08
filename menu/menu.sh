@@ -32,11 +32,11 @@ echo "║ 3. Cek Nama Domain        ┃ Domain Name Checker                  ║
 echo "║ 4. Cek IP Publik          ┃ Check Public IP                      ║"
 echo "║ 5. Update DLL             ┃ Update ETC                           ║"
 echo "║ 6. XRAY UPDATE Core       ┃ Update Core                          ║"
-echo "║ 7. XRAY UPDATE SCRIPT     ┃ Update Script                        ║"
+echo "║ 7. Autoreboot             ┃ autoreboot                           ║"
 echo "║ 8. Hidupkan Ulang Xray    ┃ Restart Service XRAY                 ║"
 echo "║ 9. Perbarui Sertifikat    ┃ Update Certificate                   ║"
 echo "║ 10.Tambahkan Domain       ┃ ADD DOMAIN                           ║"
-echo "║ 11.CARA POINTING DOMAIN   ┃                                      ║"
+echo "║ 11.Running                ┃                                      ║"
 echo "║ 12.Test Kecepatan Server  ┃ Speedtest Server                     ║"
 echo "║ 13.Hidupkan Ulang VPS     ┃ Reboot                               ║"
 echo "║ 14.Keluar Dari Menu       ┃ Exit Menu                            ║"
@@ -59,13 +59,13 @@ cat /etc/xray/domain
 curl -s ipinfo.io/ip
 ;;
 5)
-updatedll
+senmenu
 ;;
 6)
 updatecore
 ;;
 7)
-updatesc
+autoreboot
 ;;
 8)
 restart-xray
@@ -77,7 +77,7 @@ certv2ray
 add-domain
 ;;
 11)
-how-pointing
+running
 ;;
 12)
 speedtest
