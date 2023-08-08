@@ -35,7 +35,7 @@ echo "║ 6. XRAY UPDATE Core       ┃ Update Core                         ║"
 echo "║ 7. Autoreboot             ┃ autoreboot                          ║"
 echo "║ 8. Hidupkan Ulang Xray    ┃ Restart Service XRAY                ║"
 echo "║ 9. Perbarui Sertifikat    ┃ Update Certificate                  ║"
-echo "║ 10.Tambahkan Domain       ┃ ADD DOMAIN                          ║"
+echo "║ 10.Change Domain          ┃ CNG DOMAIN                          ║"
 echo "║ 11.Running                ┃                                     ║"
 echo "║ 12.Test Kecepatan Server  ┃ Speedtest Server                    ║"
 echo "║ 13.Hidupkan Ulang VPS     ┃ Reboot                              ║"
@@ -74,7 +74,7 @@ restart-xray
 certv2ray
 ;;
 10)
-add-domain
+chngedomain
 ;;
 11)
 running
