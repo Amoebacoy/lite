@@ -55,7 +55,6 @@ wget -O auto-pointing "https://raw.githubusercontent.com/Amoebacoy/lite/main/men
 wget -O cek-port "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/cek-port.sh"
 wget -O menu "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/menu.sh"
 # update xray menu
-wget -O adddomain "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/adddomain.sh"
 wget -O chngedomain "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/chngedomain.sh"
 wget -O certxray "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/certxray.sh"
 wget -O xp "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/xp.sh"
@@ -78,7 +77,6 @@ chmod +x auto-pointing
 chmod +x cek-port
 # update xray menu
 chmod +x certxray
-chmod +x adddomain
 chmod +x chngedomain
 chmod +x xp
 chmod +x speedtest
