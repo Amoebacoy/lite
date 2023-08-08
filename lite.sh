@@ -31,15 +31,15 @@ echo "IP=" >> /var/lib/akbarstorevpn/ipvps.conf
 cd
 #
 # Add Domain
-wget https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/updated/adddomain.sh && chmod +x adddomain.sh && ./adddomain.sh
+wget https://raw.githubusercontent.com/Amoebacoy/lite/main/adddomain.sh && chmod +x adddomain.sh && ./adddomain.sh
 #
 #install tools/alat
-wget https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/install-tools.sh && chmod +x install-tools.sh && ./install-tools.sh
+wget https://raw.githubusercontent.com/Amoebacoy/lite/main/install-tools.sh && chmod +x install-tools.sh && ./install-tools.sh
 #
 #Instal Xray
-wget https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/install-xray.sh && chmod +x install-xray.sh && ./install-xray.sh
+wget https://raw.githubusercontent.com/Amoebacoy/lite/main/install-xray.sh && chmod +x install-xray.sh && ./install-xray.sh
 #install xmenu
-wget https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/menu/updatedll.sh && chmod +x updatedll.sh && ./updatedll.sh
+wget https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/senmenu.sh && chmod +x senmenu.sh && ./senmenu.sh
 #
 #SELESAI
 # collor status
@@ -50,9 +50,9 @@ source /var/lib/akbarstorevpn/ipvps.conf
 if [[ "$IP" = "" ]]; then
 	clear
     echo -e " ${error1}Installation Failed!!"
-	rm -rf updatedll
-	rm -rf updatedll.sh
-	rm -rf setup.sh
+	rm -rf senmenu
+	rm -rf senmenu.sh
+	rm -rf lite.sh
 	rm -rf install-xray.sh
 	rm -rf install-tools.sh
 	rm -rf adddomain.sh
@@ -104,12 +104,20 @@ else
 	echo " Reboot 15 Sec"
 	sleep 15
 	cd
-	rm -rf updatedll
-	rm -rf updatedll.sh
-	rm -rf setup.sh
+	rm -rf senmenu
+	rm -rf senmenu.sh
+	rm -rf lite.sh
 	rm -rf install-xray.sh
 	rm -rf install-tools.sh
 	rm -rf adddomain.sh
 	sleep 1
-	reboot
+fi
+history -c
+sleep 1
+echo -ne "[ ${yell}WARNING${NC} ] Do you want to reboot now ? (y/n)? "
+read answer
+if [ "$answer" == "${answer#[Yy]}" ] ;then
+exit 0
+else
+reboot
 fi
