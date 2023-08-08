@@ -59,6 +59,10 @@ wget -O adddomain "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/ad
 wget -O chngedomain "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/chngedomain.sh"
 wget -O certxray "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/certxray.sh"
 wget -O xp "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/xp.sh"
+wget -O speedtest "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/speedtes_cli.py"
+wget -O autoreboot "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/autoreboot.sh"
+wget -O running "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/running.sh"
+
 
 #
 chmod +x /usr/bin/senmenu
@@ -66,7 +70,7 @@ chmod +x /usr/bin/menu
 chmod +x menu
 chmod +x add-akun
 chmod +x delete-akun
-chmod +x updatedll
+chmod +x senmenu
 chmod +x add-akun
 chmod +x certv2ray
 chmod +x restart-xray
@@ -77,6 +81,8 @@ chmod +x certxray
 chmod +x adddomain
 chmod +x chngedomain
 chmod +x xp
+chmod +x speedtest
+chmod +x running
 
 clear
 echo -e "Update Selesai..."
