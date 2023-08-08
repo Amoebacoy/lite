@@ -29,45 +29,41 @@ else
     sleep 2
 fi
 # ==========================================
-# link hosting kalian
-akbarvpn="https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/menu"
-akbarvpnn="https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/menu/updated"
-akbarvpnnn="https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/updated"
 cd
 rm -r senmenu
-wget -O updatedll "https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/menu/senmenu.sh"
+wget -O senmenu "https://raw.githubusercontent.com/Amoebacoy/lite/main/senmenu.sh"
 rm -rf senmenu
 
 # hapus
 cd /usr/bin
-rm -rf xmenu
-rm -rf updatedll
-rm -r updatedll
+rm -rf menu
+rm -rf senmenu
+rm -r senmenu
 # download
 #
 cd /usr/bin
 # update by SL
-wget -O menu "https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/menu/xmenu.sh"
-wget -O add-akun "https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/menu/add-akun.sh"
-wget -O updatedll "https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/menu/updatedll.sh"
-wget -O add-akun "https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/menu/add-akun.sh"
-wget -O delete-akun "https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/menu/delete-akun.sh"
-wget -O certv2ray "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/xray/certv2ray.sh"
-wget -O restart-xray "https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/menu/restart-xray.sh"
-wget -O menu "https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/menu/xmenu.sh"
-wget -O auto-pointing "https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/menu/auto-pointing.sh"
-wget -O cek-port "https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/menu/cek-port.sh"
-wget -O menu "https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/menu/xmenu.sh"
+wget -O menu "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/menu.sh"
+wget -O add-akun "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/add-akun.sh"
+wget -O senmenu "https://raw.githubusercontent.com/Amoebacoy/lite/main/senmenu.sh"
+wget -O add-akun "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/add-akun.sh"
+wget -O delete-akun "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/delete-akun.sh"
+wget -O certv2ray "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/certv2ray.sh"
+wget -O restart-xray "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/restart-xray.sh"
+wget -O menu "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/menu.sh"
+wget -O auto-pointing "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/auto-pointing.sh"
+wget -O cek-port "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/cek-port.sh"
+wget -O menu "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/menu.sh"
 # update xray menu
-wget -O adddomain "${akbarvpnnn}/adddomain.sh"
-wget -O chngedomain "${akbarvpnnn}/chngedomain.sh"
-wget -O certxray "${akbarvpnnn}/certxray.sh"
-wget -O xp "${akbarvpnnn}/xp.sh"
+wget -O adddomain "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/adddomain.sh"
+wget -O chngedomain "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/chngedomain.sh"
+wget -O certxray "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/certxray.sh"
+wget -O xp "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/xp.sh"
 
 #
-chmod +x /usr/bin/updatedll
+chmod +x /usr/bin/senmenu
 chmod +x /usr/bin/menu
-chmod +x xmenu
+chmod +x menu
 chmod +x add-akun
 chmod +x delete-akun
 chmod +x updatedll
