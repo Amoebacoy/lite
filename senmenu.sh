@@ -47,7 +47,7 @@ rm -r updatedll
 #
 cd /usr/bin
 # update by SL
-wget -O xmenu "https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/menu/xmenu.sh"
+wget -O menu "https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/menu/xmenu.sh"
 wget -O add-akun "https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/menu/add-akun.sh"
 wget -O updatedll "https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/menu/updatedll.sh"
 wget -O add-akun "https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/menu/add-akun.sh"
@@ -57,7 +57,7 @@ wget -O restart-xray "https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/m
 wget -O xmenu "https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/menu/xmenu.sh"
 wget -O auto-pointing "https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/menu/auto-pointing.sh"
 wget -O cek-port "https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/menu/cek-port.sh"
-wget -O xmenu "https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/menu/xmenu.sh"
+wget -O menu "https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/menu/xmenu.sh"
 # update xray menu
 wget -O adddomain "${akbarvpnnn}/adddomain.sh"
 wget -O chngedomain "${akbarvpnnn}/chngedomain.sh"
@@ -66,7 +66,7 @@ wget -O xp "${akbarvpnnn}/xp.sh"
 
 #
 chmod +x /usr/bin/updatedll
-chmod +x /usr/bin/xmenu
+chmod +x /usr/bin/menu
 chmod +x xmenu
 chmod +x add-akun
 chmod +x delete-akun
