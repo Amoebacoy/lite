@@ -148,7 +148,7 @@ cat > /etc/xray/config.json << END
        "streamSettings":{
          "network": "ws",
             "wsSettings": {
-                "path": "/xrayws"
+                "path": "/vless"
           }
         }
      },
@@ -167,7 +167,7 @@ cat > /etc/xray/config.json << END
        "streamSettings":{
          "network": "ws",
             "wsSettings": {
-                "path": "/xrayvws"
+                "path": "/vmess"
           }
         }
      },
@@ -187,7 +187,7 @@ cat > /etc/xray/config.json << END
        "streamSettings":{
            "network": "ws",
            "wsSettings": {
-               "path": "/xraytrojanws"
+               "path": "/trojan"
             }
          }
      },
@@ -414,7 +414,7 @@ cat >/etc/nginx/conf.d/xray.conf <<EOF
              root /home/vps/public_html;
         }
 EOF
-sed -i '$ ilocation = /xrayws' /etc/nginx/conf.d/xray.conf
+sed -i '$ ilocation = /vless' /etc/nginx/conf.d/xray.conf
 sed -i '$ i{' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_redirect off;' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_pass http://unix:/run/xray/vless_ws.sock;' /etc/nginx/conf.d/xray.conf
@@ -426,7 +426,7 @@ sed -i '$ iproxy_set_header Connection "upgrade";' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_set_header Host \$http_host;' /etc/nginx/conf.d/xray.conf
 sed -i '$ i}' /etc/nginx/conf.d/xray.conf
 
-sed -i '$ ilocation = /xrayvws' /etc/nginx/conf.d/xray.conf
+sed -i '$ ilocation = /vmess' /etc/nginx/conf.d/xray.conf
 sed -i '$ i{' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_redirect off;' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_pass http://unix:/run/xray/vmess_ws.sock;' /etc/nginx/conf.d/xray.conf
@@ -438,7 +438,7 @@ sed -i '$ iproxy_set_header Connection "upgrade";' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_set_header Host \$http_host;' /etc/nginx/conf.d/xray.conf
 sed -i '$ i}' /etc/nginx/conf.d/xray.conf
 
-sed -i '$ ilocation = /xraytrojanws' /etc/nginx/conf.d/xray.conf
+sed -i '$ ilocation = /trojan' /etc/nginx/conf.d/xray.conf
 sed -i '$ i{' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_redirect off;' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_pass http://unix:/run/xray/trojan_ws.sock;' /etc/nginx/conf.d/xray.conf
