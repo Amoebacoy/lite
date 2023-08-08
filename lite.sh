@@ -60,12 +60,11 @@ mkdir /etc/xray;
 echo "IP=" >> /var/lib/crot/ipvps.conf
 echo "IP=" >> /var/lib/akbarstorevpn/ipvps.conf
 cd /etc/
-cat > /etc/hosts <<-END
-185.199.108.133 raw.githubusercontent.com
-185.199.109.133 raw.githubusercontent.com
-185.199.110.133 raw.githubusercontent.com
-185.199.111.133 raw.githubusercontent.com
-END
+sudo echo "185.199.108.133 raw.githubusercontent.com" | tee -a /etc/hosts
+sudo echo "185.199.109.133 raw.githubusercontent.com" | tee -a /etc/hosts
+sudo echo "185.199.110.133 raw.githubusercontent.com" | tee -a /etc/hosts
+sudo echo "185.199.111.133 raw.githubusercontent.com" | tee -a /etc/hosts
+
 cd
 #
 # Add Domain
