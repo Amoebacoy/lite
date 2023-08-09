@@ -97,14 +97,11 @@ clear
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[39;1;92m                  ⇱ SERVER INFORMATION ⇲                  \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-if [ "$cekup" = "day" ]; then
-echo -e "${BICyan} ⇲  ${BLUE}System Uptime   ${NC}:  ${YELLOW}$uphours $upminutes $uptimecek${NC}"
-else
-echo -e "${BICyan} ⇲  ${BLUE}System Uptime   ${NC}:  ${YELLOW}$uphours $upminutes${NC}"
-fi
-echo -e "${BICyan} ⇲  ${BLUE}Current Domain  ${NC}:  ${YELLOW}$(cat /etc/xray/domain)${NC}"
-echo -e "${BICyan} ⇲  ${BLUE}IP-VPS          ${NC}:  ${YELLOW}$IPVPS${NC}"
-echo -e "${BICyan} ⇲  ${BLUE}ISP-VPS         ${NC}:  ${YELLOW}$ISPVPS${NC}"
+echo -e "${BICyan} □  ${BLUE}Server Uptime   ${NC}:  ${YELLOW}$( uptime -p  | cut -d " " -f 2-10000 )${NC}"
+echo -e "${BICyan} •  ${BLUE}Current Time    ${NC}:  ${YELLOW}$( date -d "0 days" +"%d-%m-%Y | %X" )${NC}"
+echo -e "${BICyan} □  ${BLUE}Current Domain  ${NC}:  ${YELLOW}$(cat /etc/xray/domain)${NC}"
+echo -e "${BICyan} •  ${BLUE}IP-VPS          ${NC}:  ${YELLOW}$IPVPS${NC}"
+echo -e "${BICyan} □  ${BLUE}ISP-VPS         ${NC}:  ${YELLOW}$ISPVPS${NC}"
 echo -e "${CYAN}╔══════════════════════════════════════════════════════════╗\033[0m${NC}"
 echo -e "\E[39;1;92m                        ⇱ XRAY Lite ⇲                    \E[0m"
 echo -e "${CYAN}╚══════════════════════════════════════════════════════════╝\033[0m${NC}"
