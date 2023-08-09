@@ -56,7 +56,7 @@ rm -rf /usr/bin/running
 rm -rf /usr/bin/autoreboot
 # download
 #
-cd /usr/bin
+cd /usr/bin/
 # update by SL
 wget -O menu "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/menu.sh"
 wget -O add-akun "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/add-akun.sh"
@@ -76,6 +76,7 @@ wget -O xp "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/xp.sh"
 wget -O speedtest "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/speedtes_cli.py"
 wget -O autoreboot "https://raw.githubusercontent.com/Amoebacoy/newpro/main/autoreboot.sh"
 wget -O running "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/running.sh"
+wget -O menu-backup "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/menu-backup.sh"
 
 
 #
@@ -97,9 +98,12 @@ chmod +x xp
 chmod +x speedtest
 chmod +x running
 chmod +x autoreboot
+chmod +x menu-backup
 
 clear
 echo -e "Update Selesai..."
 rm -fr /root/senmenu.sh
 clear
-
+clear
+clear && clear && clear
+clear;clear;clear
