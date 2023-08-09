@@ -82,7 +82,7 @@ delete-akun
 echo -e "$GREEN│${NC} ${LIGHT}             • DELETE XRAY USER •              ${NC} $LIGHT│$NC"
 echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
 	echo "     No  Expired   User"
-	grep -E "^#& " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | nl -s ') '
+	grep -E '^#&' "/etc/xray/config.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
 			read -rp "Select one client [1]: " CLIENT_NUMBER
@@ -90,8 +90,8 @@ echo -e "$GREEN└────────────────────�
 			read -rp "Select one client [1-${NUMBER_OF_CLIENTS}]: " CLIENT_NUMBER
 		fi
 	done
-user=$(grep -E "^#& " "/etc/xray/config.json" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
-exp=$(grep -E "^#& " "/etc/xray/config.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
+user=$(grep -E '^#&' "/etc/xray/config.json" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
+exp=$(grep -E '^#&' "/etc/xray/config.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
 sed -i "/^#& $user $exp/,/^},{/d" /etc/xray/config.json
 
 rm -f /etc/xray/vmess-$user-tls.json /etc/xray/vmess-$user-nontls.json
