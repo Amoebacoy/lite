@@ -113,7 +113,7 @@ echo -e "     ${LIGHT} NGINX ${NC}: ${GREEN}$resngx           ${LIGHT} Today  ${
 echo -e "     ${LIGHT} XRAY  ${NC}: ${GREEN}$resv2r           ${LIGHT} Monthly${NC}: ${YELLOW}$tmon${NC}" 
 echo -e "${CYAN}╚══════════════════════════════════════════════════════════╝\033[0m${NC}"
 echo -e "${CYAN}╔══════════════════════════════════════════════════════════╗\033[0m${NC}"
-echo -e "\E[39;1;92m                        ⇱ XRAY XMENU ⇲                     \E[0m"
+echo -e "\E[39;1;92m                        ⇱ XRAY MENU ⇲                     \E[0m"
 echo -e "${CYAN}╚══════════════════════════════════════════════════════════╡\033[0m${NC}"
 echo -e "${CYAN}║ ${BICyan}[${BIWhite}01${BICyan}]${RED} •${NC} ${CYAN}Buat Semua Akun XRAY   ┃ ${LIGHT}Create Account             \033[0m${NC}"
 echo -e "${CYAN}║ ${BICyan}[${BIWhite}02${BICyan}]${RED} •${NC} ${CYAN}Hapus Akun XRAY        ┃ ${LIGHT}Delete Account             \033[0m${NC}"
