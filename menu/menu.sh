@@ -131,11 +131,9 @@ echo -e "${CYAN}║ ${BICyan}[${BIWhite}16${BICyan}]${RED} •${NC} ${CYAN}Auto 
 echo -e "${CYAN}║ ${BICyan}[${BIWhite}17${BICyan}]${RED} •${NC} ${CYAN}Cek Semua Layanan Port ┃ Check All Port Service     \033[0m${NC}"
 echo -e "${CYAN}╚══════════════════════════════════════════════════════════╝\033[0m${NC}" 
 echo -e ""
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 read -p "     Select From Options [1-69 or x] :  " menu
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e ""
 case $menu in 
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 1)
 add-akun
 ;;
