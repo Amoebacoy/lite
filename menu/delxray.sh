@@ -75,8 +75,6 @@ NUMBER_OF_CLIENTS=$(`cat /etc/xray/config.json | grep '^#&' | cut -d ' ' -f 2 | 
 	fi
 
 	clear
-        read -n 1 -s -r -p "   Press any key to back on menu"
-        delete-akun
 	echo ""
 	echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$GREEN│${NC} ${LIGHT}             • DELETE XRAY USER •              ${NC} $LIGHT│$NC"
