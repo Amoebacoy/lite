@@ -130,4 +130,3 @@ case $opt in
 00 | 0) clear ; menu ;;
 *) clear ; menu-xray ;;
 esac
-
