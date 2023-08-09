@@ -88,6 +88,8 @@ echo -e "$GREEN└────────────────────�
 			read -rp "Select one client [1-${NUMBER_OF_CLIENTS}]: " CLIENT_NUMBER
 		fi
 	done
+read -n 1 -s -r -p "   Press any key to back on menu"
+delete-akun
 user=$(grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
 exp=$(grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
 sed -i "/^### $user $exp/,/^},{/d" /etc/xray/config.json
@@ -107,12 +109,12 @@ echo  ============================================================
 echo           • Aby&Fabumi •
 echo ============================================================
 read -n 1 -s -r -p "   Press any key to back on menu"
-menu
+delete-akun
 }
 
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}             • XRAY PANEL MENU •              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}             • XRAY PANEL MENU •               ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
 echo -e " $COLOR1│$NC   ${COLOR1}[01]${NC} • DELETE XRAY${NC}                          $COLOR1│$NC"
@@ -121,7 +123,7 @@ echo -e " $COLOR1│$NC                                              ${NC} $COLO
 echo -e " $COLOR1│$NC   ${COLOR1}[00]${NC} • GO BACK${NC}                              $COLOR1│$NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}                 • Aby&Fabumi •                 $COLOR1│$NC"
+echo -e "$COLOR1│${NC}                  • Aby&Fabumi •                 $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -p " Select menu :  "  opt
