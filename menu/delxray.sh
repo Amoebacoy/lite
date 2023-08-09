@@ -67,7 +67,7 @@ delete-akun
 }
 function delxray(){
 clear
-NUMBER_OF_CLIENTS=$(`cat /etc/xray/config.json | grep '^#&' | cut -d ' ' -f 2 | sort | uniq`)
+NUMBER_OF_CLIENTS=$(grep -c -E "^#& " "/etc/xray/config.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		echo ""
 		echo "You have no existing clients!"
