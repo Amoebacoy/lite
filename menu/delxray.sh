@@ -95,8 +95,6 @@ sed -i "/^#&  $user $exp/,/^},{/d" /etc/xray/config.json
 rm -f /etc/xray/vmess-$user-tls.json /etc/xray/vmess-$user-nontls.json
 systemctl restart xray.service
 clear
-read -n 1 -s -r -p "   Press any key to back on menu"
-delete-akun
 echo ""
 echo ┌─────────────────────────────────────────────────┐
 echo │             • DELETED XRAY USER •              
@@ -108,8 +106,6 @@ echo "Expired   : $exp"
 echo  ============================================================
 echo           • Aby&Fabumi •
 echo ============================================================
-read -n 1 -s -r -p "   Press any key to back on menu"
-delete-akun
 }
 
 clear
