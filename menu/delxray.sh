@@ -108,6 +108,8 @@ echo           • Aby&Fabumi •
 echo ============================================================
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu
+}
+
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}             • VLESS PANEL MENU •              ${NC} $COLOR1│$NC"
