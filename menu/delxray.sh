@@ -20,7 +20,7 @@ clear
 echo -n > /tmp/other.txt
 data=( `cat /etc/xray/config.json | grep '^###' | cut -d ' ' -f 2 | sort | uniq`);
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}            • USER ONLINE NOW •              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}            • USER ONLINE NOW •                ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 
@@ -59,11 +59,11 @@ done
 rm -rf /tmp/other.txt
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}                 • Aby&Fabumi •                 $COLOR1│$NC"
+echo -e "$COLOR1│${NC}                 • Aby&Fabumi •                  $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
-menu-xray
+delete-akun
 }
 function delxray(){
 clear
@@ -112,11 +112,11 @@ menu
 
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}             • VLESS PANEL MENU •              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}             • XRAY PANEL MENU •              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
-echo -e " $COLOR1│$NC   ${COLOR1}[01]${NC} • DELETE XRAY${NC}   $COLOR1│$NC"
-echo -e " $COLOR1│$NC   ${COLOR1}[02]${NC} • USER ONLINE    $COLOR1│$NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[01]${NC} • DELETE XRAY${NC}                          $COLOR1│$NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[02]${NC} • USER ONLINE                               $COLOR1│$NC"
 echo -e " $COLOR1│$NC                                              ${NC} $COLOR1│$NC"
 echo -e " $COLOR1│$NC   ${COLOR1}[00]${NC} • GO BACK${NC}                              $COLOR1│$NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
@@ -130,5 +130,5 @@ case $opt in
 01 | 1) clear ; delxray ;;
 02 | 2) clear ; cekxray ;;
 00 | 0) clear ; menu ;;
-*) clear ; menu-xray ;;
+*) clear ; delete-akun ;;
 esac
