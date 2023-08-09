@@ -117,18 +117,18 @@ echo -e "\E[39;1;92m                        ⇱ XRAY XMENU ⇲                  
 echo -e "${CYAN}╚══════════════════════════════════════════════════════════╡\033[0m${NC}"
 echo -e "${CYAN}║ ${BICyan}[${BIWhite}01${BICyan}]${RED} •${NC} ${CYAN}Buat Semua Akun XRAY   ┃ ${LIGHT}Create Account             \033[0m${NC}"
 echo -e "${CYAN}║ ${BICyan}[${BIWhite}02${BICyan}]${RED} •${NC} ${CYAN}Hapus Akun XRAY        ┃ ${LIGHT}Delete Account             \033[0m${NC}"
-echo -e "${CYAN}║ ${BICyan}[${BIWhite}05${BICyan}]${RED} •${NC} ${CYAN}Update DLL             ┃ ${LIGHT}Update ETC                 \033[0m${NC}"
-echo -e "${CYAN}║ ${BICyan}[${BIWhite}06${BICyan}]${RED} •${NC} ${CYAN}XRAY UPDATE Core       ┃ ${LIGHT}Update Core                \033[0m${NC}"
-echo -e "${CYAN}║ ${BICyan}[${BIWhite}07${BICyan}]${RED} •${NC} ${CYAN}Autoreboot             ┃ ${LIGHT}autoreboot                 \033[0m${NC}"
-echo -e "${CYAN}║ ${BICyan}[${BIWhite}08${BICyan}]${RED} •${NC} ${CYAN}Hidupkan Ulang Xray    ┃ ${LIGHT}Restart Service XRAY       \033[0m${NC}"
-echo -e "${CYAN}║ ${BICyan}[${BIWhite}09${BICyan}]${RED} •${NC} ${CYAN}Perbarui Sertifikat    ┃ ${LIGHT}Update Certificate         \033[0m${NC}"
-echo -e "${CYAN}║ ${BICyan}[${BIWhite}10${BICyan}]${RED} •${NC} ${CYAN}Change Domain          ┃ ${LIGHT}CNG DOMAIN                 \033[0m${NC}"
-echo -e "${CYAN}║ ${BICyan}[${BIWhite}11${BICyan}]${RED} •${NC} ${CYAN}Running                ┃ ${LIGHT}                           \033[0m${NC}"
-echo -e "${CYAN}║ ${BICyan}[${BIWhite}12${BICyan}]${RED} •${NC} ${CYAN}Test Kecepatan Server  ┃ ${LIGHT}Speedtest Server           \033[0m${NC}"
-echo -e "${CYAN}║ ${BICyan}[${BIWhite}13${BICyan}]${RED} •${NC} ${CYAN}Hidupkan Ulang VPS     ┃ ${LIGHT}Reboot                     \033[0m${NC}"
-echo -e "${CYAN}║ ${BICyan}[${BIWhite}15${BICyan}]${RED} •${NC} ${CYAN}Info Script            ┃ ${LIGHT}                           \033[0m${NC}"
-echo -e "${CYAN}║ ${BICyan}[${BIWhite}16${BICyan}]${RED} •${NC} ${CYAN}Auto Pointing Subdomain┃ ${LIGHT}                           \033[0m${NC}"
-echo -e "${CYAN}║ ${BICyan}[${BIWhite}17${BICyan}]${RED} •${NC} ${CYAN}Cek Semua Layanan Port ┃ ${LIGHT}Check All Port Service     \033[0m${NC}"
+echo -e "${CYAN}║ ${BICyan}[${BIWhite}03${BICyan}]${RED} •${NC} ${CYAN}Update DLL             ┃ ${LIGHT}Update ETC                 \033[0m${NC}"
+echo -e "${CYAN}║ ${BICyan}[${BIWhite}04${BICyan}]${RED} •${NC} ${CYAN}XRAY UPDATE Core       ┃ ${LIGHT}Update Core                \033[0m${NC}"
+echo -e "${CYAN}║ ${BICyan}[${BIWhite}05${BICyan}]${RED} •${NC} ${CYAN}Autoreboot             ┃ ${LIGHT}autoreboot                 \033[0m${NC}"
+echo -e "${CYAN}║ ${BICyan}[${BIWhite}06${BICyan}]${RED} •${NC} ${CYAN}Hidupkan Ulang Xray    ┃ ${LIGHT}Restart Service XRAY       \033[0m${NC}"
+echo -e "${CYAN}║ ${BICyan}[${BIWhite}07${BICyan}]${RED} •${NC} ${CYAN}Perbarui Sertifikat    ┃ ${LIGHT}Update Certificate         \033[0m${NC}"
+echo -e "${CYAN}║ ${BICyan}[${BIWhite}08${BICyan}]${RED} •${NC} ${CYAN}Change Domain          ┃ ${LIGHT}CNG DOMAIN                 \033[0m${NC}"
+echo -e "${CYAN}║ ${BICyan}[${BIWhite}09${BICyan}]${RED} •${NC} ${CYAN}Running                ┃ ${LIGHT}                           \033[0m${NC}"
+echo -e "${CYAN}║ ${BICyan}[${BIWhite}10${BICyan}]${RED} •${NC} ${CYAN}Test Kecepatan Server  ┃ ${LIGHT}Speedtest Server           \033[0m${NC}"
+echo -e "${CYAN}║ ${BICyan}[${BIWhite}11${BICyan}]${RED} •${NC} ${CYAN}Hidupkan Ulang VPS     ┃ ${LIGHT}Reboot                     \033[0m${NC}"
+echo -e "${CYAN}║ ${BICyan}[${BIWhite}12${BICyan}]${RED} •${NC} ${CYAN}Info Script            ┃ ${LIGHT}                           \033[0m${NC}"
+echo -e "${CYAN}║ ${BICyan}[${BIWhite}13${BICyan}]${RED} •${NC} ${CYAN}Auto Pointing Subdomain┃ ${LIGHT}                           \033[0m${NC}"
+echo -e "${CYAN}║ ${BICyan}[${BIWhite}14${BICyan}]${RED} •${NC} ${CYAN}Cek Semua Layanan Port ┃ ${LIGHT}Check All Port Service     \033[0m${NC}"
 echo -e "${CYAN}╚══════════════════════════════════════════════════════════╝\033[0m${NC}" 
 echo -e ""
 echo
@@ -142,48 +142,39 @@ add-akun
 delete-akun
 ;;
 3)
-cat /etc/xray/domain
-;;
-4)
-curl -s ipinfo.io/ip
-;;
-5)
 senmenu
 ;;
-6)
+4)
 updatecore
 ;;
-7)
+5)
 autoreboot
 ;;
-8)
+6)
 restart-xray
 ;;
-9)
+7)
 certv2ray
 ;;
-10)
+8)
 chngedomain
 ;;
-11)
+9)
 running
 ;;
-12)
+10)
 speedtest
 ;;
-13)
+11)
 reboot
 ;;
-14)
-exit
-;;
-15)
+12)
 cat /root/log-install.txt
 ;;
-16)
+13)
 auto-pointing
 ;;
-17)
+14)
 cek-port
 ;;
 100) clear ; $up2u ;;
