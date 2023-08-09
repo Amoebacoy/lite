@@ -18,7 +18,7 @@ red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 function cekxray(){
 clear
 echo -n > /tmp/other.txt
-data=( `cat /etc/xray/config.json | grep '^#&' | cut -d ' ' -f 2 | sort | uniq`);
+data=( `cat /etc/xray/config.json | grep '^###' | cut -d ' ' -f 2 | sort | uniq`);
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}            • USER ONLINE NOW •                ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
@@ -67,7 +67,7 @@ delete-akun
 }
 function delxray(){
 clear
-NUMBER_OF_CLIENTS=$(grep -c -E "^#& " "/etc/xray/config.json")
+NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		echo ""
 		echo "You have no existing clients!"
@@ -80,7 +80,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#& " "/etc/xray/config.json")
 echo -e "$GREEN│${NC} ${LIGHT}             • DELETE XRAY USER •              ${NC} $LIGHT│$NC"
 echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
 	echo "     No  Expired   User"
-	grep -E "^#& " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | nl -s ') '
+	grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
 			read -rp "Select one client [1]: " CLIENT_NUMBER
@@ -88,9 +88,9 @@ echo -e "$GREEN└────────────────────�
 			read -rp "Select one client [1-${NUMBER_OF_CLIENTS}]: " CLIENT_NUMBER
 		fi
 	done
-user=$(grep -E "^#& " "/etc/xray/config.json" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
-exp=$(grep -E "^#& " "/etc/xray/config.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
-sed -i "/^#&  $user $exp/,/^},{/d" /etc/xray/config.json
+user=$(grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
+exp=$(grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
+sed -i "/^###  $user $exp/,/^},{/d" /etc/xray/config.json
 
 rm -f /etc/xray/vmess-$user-tls.json /etc/xray/vmess-$user-nontls.json
 systemctl restart xray.service
