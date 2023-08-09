@@ -76,7 +76,7 @@ wget https://raw.githubusercontent.com/Amoebacoy/lite/main/install-tools.sh && c
 #Instal Xray
 wget https://raw.githubusercontent.com/Amoebacoy/lite/main/install-xray.sh && chmod +x install-xray.sh && ./install-xray.sh
 #install xmenu
-wget https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/senmenu.sh && chmod +x senmenu.sh && ./senmenu.sh
+wget https://raw.githubusercontent.com/Amoebacoy/lite/main/senmenu.sh && chmod +x senmenu.sh && ./senmenu.sh
 #
 #SELESAI
 cat > /etc/cron.d/xp_otm <<-END
