@@ -129,6 +129,7 @@ echo -e "${CYAN}║ ${BICyan}[${BIWhite}11${BICyan}]${RED} •${NC} ${CYAN}Hidup
 echo -e "${CYAN}║ ${BICyan}[${BIWhite}12${BICyan}]${RED} •${NC} ${CYAN}Info Script            ┃ ${LIGHT}                           \033[0m${NC}"
 echo -e "${CYAN}║ ${BICyan}[${BIWhite}13${BICyan}]${RED} •${NC} ${CYAN}Auto Pointing Subdomain┃ ${LIGHT}                           \033[0m${NC}"
 echo -e "${CYAN}║ ${BICyan}[${BIWhite}14${BICyan}]${RED} •${NC} ${CYAN}Cek Semua Layanan Port ┃ ${LIGHT}Check All Port Service     \033[0m${NC}"
+echo -e "${CYAN}║ ${BICyan}[${BIWhite}15${BICyan}]${RED} •${NC} ${CYAN}Menu Backup            ┃ ${LIGHT}Backup                     \033[0m${NC}"
 echo -e "${CYAN}╚══════════════════════════════════════════════════════════╝\033[0m${NC}" 
 echo -e ""
 echo
@@ -176,6 +177,9 @@ auto-pointing
 ;;
 14)
 cek-port
+;;
+15)
+menu-backup
 ;;
 100) clear ; $up2u ;;
 00 | 0) clear ; menu ;;
