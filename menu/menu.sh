@@ -98,13 +98,13 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e "\E[39;1;92m                  ⇱ SERVER INFORMATION ⇲                  \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 if [ "$cekup" = "day" ]; then
-echo -e "${BICyan} ⇲  ${BICyan}System Uptime   ${NC}:  ${YELLOW}$uphours $upminutes $uptimecek${NC}"
+echo -e "${BICyan} ⇲  ${BLUE}System Uptime   ${NC}:  ${YELLOW}$uphours $upminutes $uptimecek${NC}"
 else
-echo -e "${BICyan} ⇲  ${BICyan}System Uptime   ${NC}:  ${YELLOW}$uphours $upminutes${NC}"
+echo -e "${BICyan} ⇲  ${BLUE}System Uptime   ${NC}:  ${YELLOW}$uphours $upminutes${NC}"
 fi
-echo -e "${BICyan} ⇲  ${BICyan}Current Domain  ${NC}:  ${YELLOW}$(cat /etc/xray/domain)${NC}"
-echo -e "${BICyan} ⇲  ${BICyan}IP-VPS          ${NC}:  ${YELLOW}$IPVPS${NC}"
-echo -e "${BICyan} ⇲  ${BICyan}ISP-VPS         ${NC}:  ${YELLOW}$ISPVPS${NC}"
+echo -e "${BICyan} ⇲  ${BLUE}Current Domain  ${NC}:  ${YELLOW}$(cat /etc/xray/domain)${NC}"
+echo -e "${BICyan} ⇲  ${BLUE}IP-VPS          ${NC}:  ${YELLOW}$IPVPS${NC}"
+echo -e "${BICyan} ⇲  ${BLUE}ISP-VPS         ${NC}:  ${YELLOW}$ISPVPS${NC}"
 echo -e "${CYAN}╔══════════════════════════════════════════════════════════╗\033[0m${NC}"
 echo -e "\E[39;1;92m                        ⇱ XRAY Lite ⇲                    \E[0m"
 echo -e "${CYAN}╚══════════════════════════════════════════════════════════╝\033[0m${NC}"
