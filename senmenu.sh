@@ -35,25 +35,25 @@ wget -O senmenu "https://raw.githubusercontent.com/Amoebacoy/lite/main/senmenu.s
 rm -rf senmenu
 
 # hapus
-cd /usr/bin
-rm -rf menu
-rm -rf senmenu
-rm -r senmenu
-rm -rf add-akun
-rm -rf delete-akun
-rm -rf senmenu
-rm -rf add-akun
-rm -rf certv2ray
-rm -rf restart-xray
-rm -rf auto-pointing
-rm -rf cek-port
+cd 
+rm -rf /usr/bin/menu
+rm -rf /usr/bin/senmenu
+rm -r /usr/bin/senmenu
+rm -rf /usr/bin/add-akun
+rm -rf /usr/bin/delete-akun
+rm -rf /usr/bin/senmenu
+rm -rf /usr/bin/add-akun
+rm -rf /usr/bin/certv2ray
+rm -rf /usr/bin/restart-xray
+rm -rf /usr/bin/auto-pointing
+rm -rf /usr/bin/cek-port
 # update xray menu
-rm -rf certxray
-rm -rf chngedomain
-rm -rf xp
-rm -rf speedtest
-rm -rf running
-rm -rf autoreboot
+rm -rf /usr/bin/certxray
+rm -rf /usr/bin/chngedomain
+rm -rf /usr/bin/xp
+rm -rf /usr/bin/speedtest
+rm -rf /usr/bin/running
+rm -rf /usr/bin/autoreboot
 # download
 #
 cd /usr/bin
