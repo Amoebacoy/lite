@@ -39,6 +39,21 @@ cd /usr/bin
 rm -rf menu
 rm -rf senmenu
 rm -r senmenu
+rm -rf add-akun
+rm -rf delete-akun
+rm -rf senmenu
+rm -rf add-akun
+rm -rf certv2ray
+rm -rf restart-xray
+rm -rf auto-pointing
+rm -rf cek-port
+# update xray menu
+rm -rf certxray
+rm -rf chngedomain
+rm -rf xp
+rm -rf speedtest
+rm -rf running
+rm -rf autoreboot
 # download
 #
 cd /usr/bin
