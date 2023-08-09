@@ -131,10 +131,10 @@ echo -e "${CYAN}║ ${BICyan}[${BIWhite}16${BICyan}]${RED} •${NC} ${CYAN}Auto 
 echo -e "${CYAN}║ ${BICyan}[${BIWhite}17${BICyan}]${RED} •${NC} ${CYAN}Cek Semua Layanan Port ┃ Check All Port Service     \033[0m${NC}"
 echo -e "${CYAN}╚══════════════════════════════════════════════════════════╝\033[0m${NC}" 
 echo -e ""
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-read -p "     Select From Options [1-69 or x] :  " menu
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-case $menu in 
+echo
+read -p " Select menu : " opt
+echo -e ""
+case $opt in
 1)
 add-akun
 ;;
@@ -186,7 +186,7 @@ auto-pointing
 17)
 cek-port
 ;;
-*)
-echo -e "Input The Correct Number !"
-;;
+100) clear ; $up2u ;;
+00 | 0) clear ; menu ;;
+*) clear ; menu ;;
 esac
