@@ -86,9 +86,6 @@ echo -e "$GREEN└────────────────────�
 			read -rp "Select one client [1]: " CLIENT_NUMBER
 		else
 			read -rp "Select one client [1-${NUMBER_OF_CLIENTS}]: " CLIENT_NUMBER
-                else
-                        read -n 1 -s -r -p "   Press any key to back on menu"
-                        delete-akun
 		fi
 	done
 user=$(grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
@@ -98,6 +95,8 @@ sed -i "/^### $user $exp/,/^},{/d" /etc/xray/config.json
 rm -f /etc/xray/vmess-$user-tls.json /etc/xray/vmess-$user-nontls.json
 systemctl restart xray.service
 clear
+read -n 1 -s -r -p "   Press any key to back on menu"
+delete-akun
 echo ""
 echo ┌─────────────────────────────────────────────────┐
 echo │             • DELETED XRAY USER •              
