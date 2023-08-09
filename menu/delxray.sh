@@ -104,8 +104,10 @@ echo "Username  : $user"
 
 echo "Expired   : $exp"
 echo  ============================================================
-echo           • Aby&Fabumi •
+echo           • AbyFabumi •
 echo ============================================================
+read -n 1 -s -r -p "   Press any key to back on menu"
+delete-akun
 }
 
 clear
