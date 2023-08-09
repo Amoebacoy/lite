@@ -114,7 +114,7 @@ echo -e "     ${LIGHT} XRAY  ${NC}: ${GREEN}$resv2r           ${LIGHT} Monthly${
 echo -e "${CYAN}╚══════════════════════════════════════════════════════════╝\033[0m${NC}"
 echo -e "${CYAN}╔══════════════════════════════════════════════════════════╗\033[0m${NC}"
 echo -e "\E[39;1;92m                        ⇱ XRAY XMENU ⇲                     \E[0m"
-echo -e "${CYAN}╚══════════════════════════════════════════════════════════║\033[0m${NC}"
+echo -e "${CYAN}╚══════════════════════════════════════════════════════════╡\033[0m${NC}"
 echo -e "${CYAN}║ ${BICyan}[${BIWhite}01${BICyan}]${RED} •${NC} ${CYAN}Buat Semua Akun XRAY   ┃ Create Account             \033[0m${NC}"
 echo -e "${CYAN}║ ${BICyan}[${BIWhite}02${BICyan}]${RED} •${NC} ${CYAN}Hapus Akun XRAY        ┃ Delete Account             \033[0m${NC}"
 echo -e "${CYAN}║ ${BICyan}[${BIWhite}05${BICyan}]${RED} •${NC} ${CYAN}Update DLL             ┃ Update ETC                 \033[0m${NC}"
