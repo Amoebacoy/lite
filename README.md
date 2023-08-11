@@ -54,7 +54,7 @@
 ### NOTE UNTUK VPS INDO
 - silahkan update repo indo (ver debian 10 buster) tidak support OS lain / cari sendiri / slahkan edit kalau bisa
 ```
-cd /etc/ sudo echo "185.199.108.133 raw.githubusercontent.com" | tee -a /etc/hosts sudo echo "185.199.109.133 raw.githubusercontent.com" | tee -a /etc/hosts sudo echo "185.199.110.133 raw.githubusercontent.com" | tee -a /etc/hosts sudo echo "185.199.111.133 raw.githubusercontent.com" | tee -a /etc/hosts wget https://raw.githubusercontent.com/Amoebacoy/lite/main/repoindo.sh && chmod +x repoindo.sh && ./repoindo.sh
+sudo echo "185.199.108.133 raw.githubusercontent.com" | tee -a /etc/hosts && sudo echo "185.199.109.133 raw.githubusercontent.com" | tee -a /etc/hosts && sudo echo "185.199.110.133 raw.githubusercontent.com" | tee -a /etc/hosts && sudo echo "185.199.111.133 raw.githubusercontent.com" | tee -a /etc/hosts && wget https://raw.githubusercontent.com/Amoebacoy/lite/main/repoindo.sh && chmod +x repoindo.sh && ./repoindo.sh
 ```
 ### Cara Install Script Nya
 - Login ke VPS kamu ( wajib pake user ***root***)
