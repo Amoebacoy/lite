@@ -8,7 +8,7 @@
 - ***Script XRAY Multi Port 443/80 MOD By ME***
 - ***Original Script By SL***
 - ***SCRIPT UNTUK MEMBUAT SERVER VPN***
-- ***Sangat Ringan Sekali ***
+- ***Sangat Ringan Sekali***
 ###
 
 ### FITUR XRAY TLS
