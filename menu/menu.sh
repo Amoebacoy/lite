@@ -93,12 +93,12 @@ IPVPS=$(curl -s ipinfo.io/ip )
 ISPVPS=$( curl -s ipinfo.io/org )
 ttoday="$(vnstat | grep today | awk '{print $8" "substr ($9, 1, 3)}' | head -1)"
 tmon="$(vnstat -m | grep `date +%G-%m` | awk '{print $8" "substr ($9, 1 ,3)}' | head -1)"
-hostname="$(grep -E "^$( curl -s ipinfo.io/ip ) " "/etc/hosts" | cut -d ' ' -f 2 | nl -s ') ')"
+#hostname="$(grep -E "^$( curl -s ipinfo.io/ip ) " "/etc/hosts" | cut -d ' ' -f 2 | nl -s ') ')"
 clear
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[39;1;92m                  ⇱ SERVER INFORMATION ⇲                  \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "${BICyan} •  ${BLUE}HOST NAME       ${NC}:  ${YELLOW}$hostname${NC}"
+echo -e "${BICyan} •  ${BLUE}HOST NAME       ${NC}:  ${YELLOW}$HOSTNAME${NC}"
 echo -e "${BICyan} □  ${BLUE}Server Uptime   ${NC}:  ${YELLOW}$( uptime -p  | cut -d " " -f 2-10000 )${NC}"
 echo -e "${BICyan} •  ${BLUE}Current Time    ${NC}:  ${YELLOW}$( date -d "0 days" +"%d-%m-%Y | %X" )${NC}"
 echo -e "${BICyan} □  ${BLUE}Current Domain  ${NC}:  ${YELLOW}$(cat /etc/xray/domain)${NC}"
