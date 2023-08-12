@@ -85,6 +85,7 @@ resv2r="${green}ON${NC}"
 else
 resv2r="${red}OFF${NC}"
 fi
+hostname="$(grep -E "$IPVPS " "/etc/hosts" | cut -d ' ' -f 2 | nl -s ') ')"
 uphours=`uptime -p | awk '{print $2,$3}' | cut -d , -f1`
 upminutes=`uptime -p | awk '{print $4,$5}' | cut -d , -f1`
 uptimecek=`uptime -p | awk '{print $6,$7}' | cut -d , -f1`
@@ -97,6 +98,7 @@ clear
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[39;1;92m                  ⇱ SERVER INFORMATION ⇲                  \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "${BICyan} •  ${BLUE}HOST NAME       ${NC}:  ${YELLOW}$hostname${NC}"
 echo -e "${BICyan} □  ${BLUE}Server Uptime   ${NC}:  ${YELLOW}$( uptime -p  | cut -d " " -f 2-10000 )${NC}"
 echo -e "${BICyan} •  ${BLUE}Current Time    ${NC}:  ${YELLOW}$( date -d "0 days" +"%d-%m-%Y | %X" )${NC}"
 echo -e "${BICyan} □  ${BLUE}Current Domain  ${NC}:  ${YELLOW}$(cat /etc/xray/domain)${NC}"
