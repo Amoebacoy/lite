@@ -93,7 +93,7 @@ IPVPS=$(curl -s ipinfo.io/ip )
 ISPVPS=$( curl -s ipinfo.io/org )
 ttoday="$(vnstat | grep today | awk '{print $8" "substr ($9, 1, 3)}' | head -1)"
 tmon="$(vnstat -m | grep `date +%G-%m` | awk '{print $8" "substr ($9, 1 ,3)}' | head -1)"
-hostname="$(grep -E "^($IPVPS) " "/etc/hosts" | cut -d ' ' -f 2 | nl -s ') ')"
+hostname="$(grep -E "^$( curl -s ipinfo.io/ip ) " "/etc/hosts" | cut -d ' ' -f 2 | nl -s ') ')"
 clear
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[39;1;92m                  ⇱ SERVER INFORMATION ⇲                  \E[0m"
