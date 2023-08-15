@@ -87,6 +87,8 @@ clear
 cd
 wget https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/set-br.sh
 bash set-br.sh
+wget https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/3d.flf
+mv 3d.flf /usr/share/figlet/
 
 
 #
