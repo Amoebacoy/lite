@@ -94,23 +94,23 @@ cd /usr/bin/
 #
 chmod +x /usr/bin/senmenu
 chmod +x /usr/bin/menu
-chmod +x menu
-chmod +x add-akun
-chmod +x delete-akun
-chmod +x senmenu
-chmod +x add-akun
-chmod +x certv2ray
-chmod +x restart-xray
-chmod +x auto-pointing
-chmod +x cek-port
+chmod +x /usr/bin/menu
+chmod +x /usr/bin/add-akun
+chmod +x /usr/bin/delete-akun
+chmod +x /usr/bin/senmenu
+chmod +x /usr/bin/add-akun
+chmod +x /usr/bin/certv2ray
+chmod +x /usr/bin/restart-xray
+chmod +x /usr/bin/auto-pointing
+chmod +x /usr/bin/cek-port
 # update xray menu
-chmod +x certxray
-chmod +x chngedomain
-chmod +x xp
-chmod +x speedtest
-chmod +x running
-chmod +x autoreboot
-chmod +x menu-backup
+chmod +x /usr/bin/certxray
+chmod +x /usr/bin/chngedomain
+chmod +x /usr/bin/xp
+chmod +x /usr/bin/speedtest
+chmod +x /usr/bin/running
+chmod +x /usr/bin/autoreboot
+chmod +x /usr/bin/menu-backup
 
 clear
 echo -e "Update Selesai..."
