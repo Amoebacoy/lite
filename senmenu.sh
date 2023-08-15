@@ -55,6 +55,11 @@ rm -rf /usr/bin/speedtest
 rm -rf /usr/bin/running
 rm -rf /usr/bin/autoreboot
 rm -rf /usr/bin/menu-backup
+rm -rf /usr/bin/mbackup
+rm -rf /usr/bin/mrestore
+rm -rf /usr/bin/mautobackup
+rm -rf /usr/bin/mlimitspeed
+
 # download
 #
 cd /usr/bin/
@@ -78,6 +83,8 @@ wget -O speedtest "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/s
 wget -O autoreboot "https://raw.githubusercontent.com/Amoebacoy/newpro/main/autoreboot.sh"
 wget -O running "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/running.sh"
 wget -O menu-backup "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/menu-backup.sh"
+wget https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/set-br.sh
+bash set-br.sh
 
 
 #
@@ -103,7 +110,8 @@ chmod +x menu-backup
 
 clear
 echo -e "Update Selesai..."
-rm -fr /root/senmenu.sh
+rm -rf /root/senmenu.sh
+rm -rf /root/set-br.sh
 clear
 clear
 clear && clear && clear
