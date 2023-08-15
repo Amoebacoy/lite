@@ -54,6 +54,7 @@ rm -rf /usr/bin/xp
 rm -rf /usr/bin/speedtest
 rm -rf /usr/bin/running
 rm -rf /usr/bin/autoreboot
+rm -rf /usr/bin/menu-backup
 # download
 #
 cd /usr/bin/
