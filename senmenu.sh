@@ -83,6 +83,8 @@ wget -O speedtest "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/s
 wget -O autoreboot "https://raw.githubusercontent.com/Amoebacoy/newpro/main/autoreboot.sh"
 wget -O running "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/running.sh"
 wget -O menu-backup "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/menu-backup.sh"
+clear
+cd
 wget https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/set-br.sh
 bash set-br.sh
 
