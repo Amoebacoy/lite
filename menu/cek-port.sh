@@ -44,3 +44,4 @@ echo -e "\e[1;31m     [*][*][*]======================================[*][*][*]"
 echo ""
 read -sp " Press ENTER to go back"
 echo ""
+menu
