@@ -116,7 +116,17 @@ chmod +x /usr/bin/menu-backup
 chmod +x /usr/bin/updatecore
 
 clear
-echo -e "Update Selesai..."
+source /var/lib/akbarstorevpn/ipvps.conf
+if [[ "$IP" = "" ]]; then
+    clear
+    echo -e " ${error1}Gagal Install-Update.."
+    sleep 2
+    menu
+else
+    clear
+    echo -e "${success}Update Selesai..."
+    sleep 2
+fi
 rm -rf /root/senmenu.sh
 rm -rf /root/set-br.sh
 clear
