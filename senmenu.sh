@@ -59,6 +59,7 @@ rm -rf /usr/bin/mbackup
 rm -rf /usr/bin/mrestore
 rm -rf /usr/bin/mautobackup
 rm -rf /usr/bin/mlimitspeed
+rm -rf /usr/bin/updatecore
 
 # download
 #
@@ -83,6 +84,7 @@ wget -O speedtest "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/s
 wget -O autoreboot "https://raw.githubusercontent.com/Amoebacoy/newpro/main/autoreboot.sh"
 wget -O running "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/running.sh"
 wget -O menu-backup "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/menu-backup.sh"
+wget -O updatecore "https://raw.githubusercontent.com/Amoebacoy/lite/main/menu/maintenis.sh" 
 clear
 cd
 wget https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/set-br.sh
@@ -111,6 +113,7 @@ chmod +x /usr/bin/speedtest
 chmod +x /usr/bin/running
 chmod +x /usr/bin/autoreboot
 chmod +x /usr/bin/menu-backup
+chmod +x /usr/bin/updatecore
 
 clear
 echo -e "Update Selesai..."
